@@ -1,0 +1,135 @@
+ext {
+    //版本号管理
+    android = [
+            compileSdkVersion: 26,
+            buildToolsVersion: "26.0.1",
+
+            minSdkVersion    : 15,
+            targetSdkVersion : 26,
+
+            versionCode      : 1,
+            versionName      : '0.0.1',
+            applicationId    :'com.yq.action',
+
+            VSupportSdk      : '26.+',
+            VconstraintLayout: '1.0.2',
+
+            vrxlifecycle     : '0.5.0',//网络请求生命周期管理
+
+            vrxbinding2       : '2.0.0',
+
+            vokhttp          :'3.2.0',
+            vretrofit        :'2.3.0',
+            veventbus        :'3.0.0',
+            vglide           :'3.7.0',
+            vbutterknife     :'8.8.1',
+            vlogutils        :'1.5.1.1',
+            vlog2file        :'1.0.0',
+            varouterApi      :'1.2.2',
+            varouterCompiler :'1.0.3',
+            vrxandroid       :'2.0.0',
+            vrxjava          :'2.0.2',
+            vViseutils       :'1.1.0',
+            vcrashreportUpgrade:'1.3.1',
+            vmultidex        :'1.0.0',
+            vsonic           :'1.0.0',
+            vtitleBarview    :'2.0.0',
+            AVLoading        :'2.1.3',
+            Vgreendao        :'3.2.2',
+            Vtakephoto       :'4.0.3',
+            Vappintro        :'v4.2.2',
+            VadapterRxjava   :'2.0.1',
+            VdebugDb         :'1.0.1',
+            Vutilcode        :'1.9.3',
+            Vagentweb        :'2.0.1'
+
+    ]
+
+    dependencies = [
+            "appcompat-v7"   :
+                    "com.android.support:appcompat-v7:${android["VSupportSdk"]}",
+            "support-v4"     :
+                    "com.android.support:support-v4:${android["VSupportSdk"]}",
+            "design"         :
+                    "com.android.support:design:${android["VSupportSdk"]}",
+            "annotations"    :
+                    "com.android.support:support-annotations:${android["VSupportSdk"]}",
+            "recyclerview-v7":
+                    "com.android.support:recyclerview-v7:${android["VSupportSdk"]}",
+            "cardview-v7"    :
+                    "com.android.support:cardview-v7:${android["VSupportSdk"]}",
+            "constraint-layout"    :
+                    "com.android.support.constraint:constraint-layout:${android["VconstraintLayout"]}",
+            "rxlifecycle"    ://生命周期库
+                    "com.trello:rxlifecycle:${android["vrxlifecycle"]}",
+            "rxlifecycle-components"   :
+                    "com.trello:rxlifecycle-components:${android["vrxlifecycle"]}",
+            "rxbinding"      :
+                    "com.jakewharton.rxbinding2:rxbinding:${android["vrxbinding2"]}",
+            "rxbinding-support-v4"     :
+                    "com.jakewharton.rxbinding2:rxbinding-support-v4:${android["vrxbinding2"]}",
+            "rxbinding-appcompat-v7"   :
+                    "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:${android["vrxbinding2"]}",
+            "rxbinding-design"         :
+                    "com.jakewharton.rxbinding2:rxbinding-design:${android["vrxbinding2"]}",
+            "rxbinding-recyclerview-v7":
+                    "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:${android["vrxbinding2"]}",
+            "okhttp"                   :
+                    "com.squareup.okhttp3:okhttp:${android["vokhttp"]}",
+            "logging-interceptor"      :
+                    "com.squareup.okhttp3:logging-interceptor:${android["vokhttp"]}",
+//            "adapter-rxjava"      :
+//                    "com.squareup.retrofit2:adapter-rxjava:${android["VadapterRxjava"]}",
+            "retrofit"      :
+                    "com.squareup.retrofit2:retrofit:${android["vretrofit"]}",
+            "adapter-rxjava2":
+                    "com.squareup.retrofit2:adapter-rxjava2:${android["vretrofit"]}",
+            "converter-gson":
+                    "com.squareup.retrofit2:converter-gson:${android["vretrofit"]}",
+            "eventbus"      ://
+                    "org.greenrobot:eventbus:${android["veventbus"]}",
+            "glide"://图片加载库
+                    "com.github.bumptech.glide:glide:${android["vglide"]}",
+            "butterknife"://控件注解库
+                    "com.jakewharton:butterknife:${android["vbutterknife"]}",
+            "butterknife-compiler":
+                    "com.jakewharton:butterknife-compiler:${android["vbutterknife"]}",
+            "logutils"://日志框架（包含SD卡生产日志）
+                    "com.apkfuns.logutils:library:${android["vlogutils"]}",
+            "log2file":
+                    "com.apkfuns.log2file:log2file:${android["vlog2file"]}",
+            "arouter-api"://阿里路由库
+                    "com.alibaba:arouter-api:${android["varouterApi"]}",
+            "arouter-compiler":
+                    "com.alibaba:arouter-compiler:${android["varouterCompiler"]}",
+            "rxandroid2":
+                    "io.reactivex.rxjava2:rxandroid:${android["vrxandroid"]}",
+            "rxjava2":
+                    "io.reactivex.rxjava2:rxjava:${android["vrxjava"]}",
+            "viseutils":
+                    "com.vise.xiaoyaoyou:viseutils:${android["vViseutils"]}",
+            "multidex"://多dex生成库
+                    "com.android.support:multidex:${android["vmultidex"]}",
+            "crashreport_upgrade"://bugly统计更新库
+                    "com.tencent.bugly:crashreport_upgrade:${android["vcrashreportUpgrade"]}",
+            "sonic"://Hybrid 框架 VasSonic
+                    "com.tencent.sonic:sdk:${android["vsonic"]}",
+            "vtitleBarview"     ://标题栏样式库（兼容白底黑字模式(部分机型无法兼容如努比亚)）
+                    "com.github.AriesHoo:TitleBarView:${android["vtitleBarview"]}",
+            "AVLoading"      ://加载状态样式库https://github.com/81813780/AVLoadingIndicatorView
+                    "com.wang.avi:library:${android["AVLoading"]}",
+            "greendao"       ://数据库操作
+                      "org.greenrobot:greendao:${android["Vgreendao"]}",
+            "takephoto"      ://相机和相册相机库（兼容7.0）
+                    "com.jph.takephoto:takephoto_library:${android["Vtakephoto"]}",
+            "appintro"       ://app引导界面框架库
+                    "com.github.apl-devs:appintro:${android["Vappintro"]}",
+            "debugDb"        ://数据库在浏览器中查看框架
+                    "com.amitshekhar.android:debug-db:${android["VdebugDb"]}",
+            "utilcode"       ://Android常用工具集成库
+                    "com.blankj:utilcode:${android["Vutilcode"]}",
+            "agentweb"       ://webview封装 https://github.com/Justson/AgentWeb
+                    "com.just.agentweb:agentweb:${android["Vagentweb"]}",
+
+    ]
+}
